@@ -442,6 +442,80 @@ async function loadProgressFromDB() {
   try { _progressCache = JSON.parse(localStorage.getItem('vante_progress_cache')) || {}; } catch {}
 }
 
+// ============================================================
+// DADOS — IA APLICADA (38 aulas)
+// ============================================================
+const IA_MODULES = [
+  {
+    id: 'ia-fund', color: '#a855f7',
+    title: 'IA — Fundamentos e Ferramentas', subtitle: '',
+    lessons: [
+      { id:'ia-f-1', title:'Chat GPT, Gemini ou Claude? As Melhores IAs de 2025 para o Dia a Dia',   desc:'Compare as principais IAs do mercado e saiba qual usar para cada tarefa.',             url:'https://www.youtube.com/watch?v=rYAKcf0c0VU', vid:'rYAKcf0c0VU' },
+      { id:'ia-f-2', title:'APRENDA a Usar as PRINCIPAIS IAs do MERCADO em um ÚNICO Vídeo',          desc:'Tour completo pelas ferramentas de IA mais poderosas com exemplos práticos.',           url:'https://www.youtube.com/watch?v=f7xSaMQ5gR0', vid:'f7xSaMQ5gR0' },
+      { id:'ia-f-3', title:'IA pra Negócios: Curso Gratuito para Iniciantes em IA',                  desc:'Como aplicar ferramentas de IA no seu negócio digital de forma prática e eficiente.',   url:'https://www.youtube.com/watch?v=eE09THrdjKA', vid:'eE09THrdjKA' },
+      { id:'ia-f-4', title:'Qual a Melhor IA Gratuita? Testamos ChatGPT, Gemini, Claude e DeepSeek', desc:'Comparativo real entre as principais IAs gratuitas para decidir qual usar.',             url:'https://www.youtube.com/watch?v=jfalLXRtmO0', vid:'jfalLXRtmO0' },
+      { id:'ia-f-5', title:'Gemini AI — Tutorial Completo para Iniciantes 2025',                     desc:'Domine o Google Gemini no seu dia a dia: Gmail, Docs, Planilhas e muito mais.',          url:'https://www.youtube.com/watch?v=vtCcwD4BWYs', vid:'vtCcwD4BWYs' },
+      { id:'ia-f-6', title:'Curso de GOOGLE GEMINI Grátis — Iniciante ao Avançado',                  desc:'Curso completo e gratuito do Gemini do nível básico ao avançado em português.',          url:'https://www.youtube.com/watch?v=vfF2OL2Ok-A', vid:'vfF2OL2Ok-A' },
+    ]
+  },
+  {
+    id: 'ia-trafego', color: '#3b82f6',
+    title: 'IA no Tráfego Pago', subtitle: '',
+    lessons: [
+      { id:'ia-t-1', title:'Esse Truque com ChatGPT Cria Anúncios Irresistíveis para o Facebook Ads', desc:'Como usar o ChatGPT para escrever copies de anúncios persuasivas para o Facebook.',    url:'https://www.youtube.com/watch?v=vD4zSCeEw2k', vid:'vD4zSCeEw2k' },
+      { id:'ia-t-2', title:'MCP e Meta Ads AI Connectors: A Revolução da IA no Tráfego Pago',        desc:'Como os conectores de IA da Meta estão transformando a gestão de campanhas.',            url:'https://www.youtube.com/watch?v=C_m96-Tc3Fs', vid:'C_m96-Tc3Fs' },
+      { id:'ia-t-3', title:'ChatGPT para Criar Anúncios que Vendem Muito no Google Ads',             desc:'Tutorial completo: usando ChatGPT para criar e otimizar campanhas no Google Ads.',       url:'https://www.youtube.com/watch?v=uxjxlEq9g2Q', vid:'uxjxlEq9g2Q' },
+      { id:'ia-t-4', title:'Automatize TODO seu Tráfego Pago com Agente de IA no n8n',               desc:'Como criar um agente de IA no n8n para automatizar suas campanhas de anúncios.',         url:'https://www.youtube.com/watch?v=Pwsgm3NErtQ', vid:'Pwsgm3NErtQ' },
+      { id:'ia-t-5', title:'ChatGPT no Tráfego Pago — Como Usar no Facebook Ads e Google Ads',       desc:'Aplicações práticas do ChatGPT para gestão de tráfego pago nas duas principais plataformas.',url:'https://www.youtube.com/watch?v=sio81eYpyVY',vid:'sio81eYpyVY'},
+      { id:'ia-t-6', title:'7 APLICAÇÕES DO CHATGPT PARA GOOGLE ADS E FACEBOOK ADS',                 desc:'Sete formas de usar o ChatGPT para escalar e otimizar suas campanhas de anúncios.',      url:'https://www.youtube.com/watch?v=AaFCmnIgOtg', vid:'AaFCmnIgOtg' },
+      { id:'ia-t-7', title:'Meta Andromeda: a Nova IA da Meta que vai Mudar o Tráfego Pago',         desc:'Como a IA Andromeda da Meta está redefinindo a entrega e o gerenciamento de anúncios.',  url:'https://www.youtube.com/watch?v=OvWGny4JQhY', vid:'OvWGny4JQhY' },
+      { id:'ia-t-8', title:'Como Integrar a MCP do Meta ao Claude e Criar uma MÁQUINA de Tráfego',   desc:'Integração da MCP da Meta com Claude para criar fluxos automatizados de tráfego pago.',  url:'https://www.youtube.com/watch?v=x1yFR0rnwVU', vid:'x1yFR0rnwVU' },
+    ]
+  },
+  {
+    id: 'ia-design', color: '#ec4899',
+    title: 'IA no Design', subtitle: '',
+    lessons: [
+      { id:'ia-d-1', title:'Midjourney — Como Criar Imagens com IA do Zero',                         desc:'Tutorial completo do Midjourney: como gerar imagens profissionais com inteligência artificial.',url:'https://www.youtube.com/watch?v=aQqyi3E1AVc',vid:'aQqyi3E1AVc'},
+      { id:'ia-d-2', title:'Como Gerar Imagens com IA na Prática — Tutorial MidJourney',             desc:'Passo a passo prático para criar artes com Midjourney para ebooks, thumbnails e sites.',  url:'https://www.youtube.com/watch?v=joobBakG964', vid:'joobBakG964' },
+      { id:'ia-d-3', title:'COMO CRIAR IMAGENS REALISTAS COM IA + MIDJOURNEY GRÁTIS',                desc:'Como usar o Midjourney gratuitamente para criar imagens realistas e profissionais.',       url:'https://www.youtube.com/watch?v=z9ExvBUuS8M', vid:'z9ExvBUuS8M' },
+      { id:'ia-d-4', title:'Criando Carrossel com CANVA IA + MIDJOURNEY — Template Grátis',          desc:'Como combinar Canva IA e Midjourney para criar carrosséis prontos de alta qualidade.',    url:'https://www.youtube.com/watch?v=GkBOmoYcxwA', vid:'GkBOmoYcxwA' },
+      { id:'ia-d-5', title:'Nova IA do Canva é Melhor que o MidJourney e Grátis?',                   desc:'Comparativo entre a IA do Canva e o Midjourney: qual gera melhores imagens para posts.',  url:'https://www.youtube.com/watch?v=fZDHqd1XNj4', vid:'fZDHqd1XNj4' },
+      { id:'ia-d-6', title:'NOVA IA Cria Imagens GRÁTIS e ILIMITADA — Já Era MidJourney?',           desc:'Conheça a nova IA que cria imagens no padrão Midjourney de forma gratuita e ilimitada.',  url:'https://www.youtube.com/watch?v=ddNBCVI_ZhU', vid:'ddNBCVI_ZhU' },
+    ]
+  },
+  {
+    id: 'ia-social', color: '#f97316',
+    title: 'IA nas Redes Sociais', subtitle: '',
+    lessons: [
+      { id:'ia-s-1', title:'5 Prompts do ChatGPT Para Ideias de Postagens no Instagram',             desc:'Os melhores prompts para gerar dezenas de ideias de conteúdo para o Instagram com IA.',  url:'https://www.youtube.com/watch?v=-LhnRcMafeI', vid:'-LhnRcMafeI' },
+      { id:'ia-s-2', title:'Como Usar ChatGPT Para Automatizar REDES SOCIAIS — Social Media + IA',   desc:'Como usar a IA para automatizar a criação e publicação de conteúdo nas redes sociais.',   url:'https://www.youtube.com/watch?v=tppxG4S9kUI', vid:'tppxG4S9kUI' },
+      { id:'ia-s-3', title:'Como Criar Postagens Incríveis no Instagram com ChatGPT',                desc:'Fluxo completo para criar posts de alto engajamento no Instagram usando ChatGPT.',        url:'https://www.youtube.com/watch?v=kR0J_f456C4', vid:'kR0J_f456C4' },
+      { id:'ia-s-4', title:'Crie CALENDÁRIO de CONTEÚDO no INSTAGRAM usando CHATGPT',                desc:'Como usar o ChatGPT para montar um calendário editorial completo para o Instagram.',      url:'https://www.youtube.com/watch?v=XTwUn70O7LI', vid:'XTwUn70O7LI' },
+      { id:'ia-s-5', title:'Automação de IA para Redes Sociais — Conteúdo Diário 100% Automático',   desc:'Como criar um sistema de IA que gera e publica conteúdo diário e original nas redes.',    url:'https://www.youtube.com/watch?v=i8eAB2fX1cg', vid:'i8eAB2fX1cg' },
+      { id:'ia-s-6', title:'Tutorial ChatGPT: Gere 100 Ideias de Conteúdo para o Instagram',         desc:'Como usar o ChatGPT para nunca ficar sem ideias de conteúdo para o Instagram.',           url:'https://www.youtube.com/watch?v=OwjoXipKx8E', vid:'OwjoXipKx8E' },
+      { id:'ia-s-7', title:'Criar Roteiro de Vídeo com ChatGPT para YouTube e Instagram',            desc:'Como usar IA para criar roteiros de vídeos otimizados para YouTube e Instagram Reels.',  url:'https://www.youtube.com/watch?v=aYeU5tgiZqA', vid:'aYeU5tgiZqA' },
+      { id:'ia-s-8', title:'Essa IA GRÁTIS Faz TUDO de REDE SOCIAIS! (51 IAs em 1)',                 desc:'Ferramenta gratuita que reúne 51 IAs em uma só para criar qualquer tipo de conteúdo.',   url:'https://www.youtube.com/watch?v=CstX-2GBlAk', vid:'CstX-2GBlAk' },
+      { id:'ia-s-9', title:'Criei um Post em 2025 100% Original com IA — ChatGPT + Krea do Zero',    desc:'Tutorial completo de criação de post original para redes sociais usando ChatGPT e Krea.', url:'https://www.youtube.com/watch?v=XZIAER9JxZU', vid:'XZIAER9JxZU' },
+    ]
+  },
+  {
+    id: 'ia-copy', color: '#f59e0b',
+    title: 'IA no Copywriting', subtitle: '',
+    lessons: [
+      { id:'ia-c-1', title:'ChatGPT na PRÁTICA — Modelo de Prompt para Copy de Alta Conversão',      desc:'Como criar um modelo de prompt no ChatGPT que gera copies prontas para vender.',         url:'https://www.youtube.com/watch?v=sogDkSngwfc', vid:'sogDkSngwfc' },
+      { id:'ia-c-2', title:'Revolucione Sua Copy com IA em 2024',                                    desc:'Estratégia completa para usar inteligência artificial para criar copies de alto impacto.', url:'https://www.youtube.com/watch?v=2SJSnCwF0EQ', vid:'2SJSnCwF0EQ' },
+      { id:'ia-c-3', title:'O Melhor Prompt do ChatGPT Para Fazer Copywriting',                      desc:'O prompt definitivo para transformar o ChatGPT no seu assistente de copy pessoal.',       url:'https://www.youtube.com/watch?v=xDtQPvlO74I', vid:'xDtQPvlO74I' },
+      { id:'ia-c-4', title:'Prompt de Copywriting Avançado para ChatGPT que Converte de Verdade',    desc:'Como criar prompts avançados que fazem o ChatGPT escrever textos que realmente vendem.', url:'https://www.youtube.com/watch?v=x-nl-Am5jUU', vid:'x-nl-Am5jUU' },
+      { id:'ia-c-5', title:'Copywriter GPT — Transforme Qualquer IDEIA em VENDA com ChatGPT',        desc:'Use o ChatGPT como copywriter profissional para transformar suas ideias em textos de venda.',url:'https://www.youtube.com/watch?v=I6_77qjQkuU',vid:'I6_77qjQkuU'},
+      { id:'ia-c-6', title:'COMO USAR O CHATGPT PARA CRIAR COPIES DE VENDA — IA Aplicada ao Copy',   desc:'Tutorial prático de como usar IA para criar copies de venda poderosas do zero.',          url:'https://www.youtube.com/watch?v=90QywNQqXhM', vid:'90QywNQqXhM' },
+      { id:'ia-c-7', title:'PROMPTS AVANÇADOS PARA CHATGPT — COPYWRITING',                           desc:'Biblioteca de prompts avançados para copywriting que você pode usar imediatamente.',      url:'https://www.youtube.com/watch?v=gx0AEryrA2k', vid:'gx0AEryrA2k' },
+      { id:'ia-c-8', title:'7 Prompts para Criar Copy e Ofertas usando CHATGPT + Gemini',            desc:'Sete prompts poderosos para criar copies e estruturar ofertas irresistíveis com IA.',    url:'https://www.youtube.com/watch?v=UnuQ9PseVIo', vid:'UnuQ9PseVIo' },
+      { id:'ia-c-9', title:'Comandos do ChatGPT para Copywriters Profissionais',                     desc:'Os melhores comandos e prompts para copywriters profissionais dominarem o ChatGPT.',     url:'https://www.youtube.com/watch?v=Z9pOd_hMxJY', vid:'Z9pOd_hMxJY' },
+    ]
+  },
+];
+
 function countTotal(modules) { return modules.reduce((s,m)=>s+m.lessons.length,0); }
 function countDone(modules, p) {
   return modules.reduce((s,m)=>s+m.lessons.filter(l=>p[l.id]).length,0);
@@ -562,6 +636,7 @@ function updateTabCounts() {
     { id: 'dg-tab-count', mods: DESIGN_MODULES  },
     { id: 'sm-tab-count', mods: SOCIAL_MODULES  },
     { id: 'cp-tab-count', mods: COPY_MODULES    },
+    { id: 'ia-tab-count', mods: IA_MODULES      },
   ];
   sets.forEach(({ id, mods }) => {
     const el = document.getElementById(id);
@@ -571,7 +646,7 @@ function updateTabCounts() {
 
 function updateGlobalProgress() {
   const p     = getProgress();
-  const allMods = [...TRAFEGO_MODULES, ...DESIGN_MODULES, ...SOCIAL_MODULES, ...COPY_MODULES];
+  const allMods = [...TRAFEGO_MODULES, ...DESIGN_MODULES, ...SOCIAL_MODULES, ...COPY_MODULES, ...IA_MODULES];
   const total = allMods.reduce((s,m)=>s+m.lessons.length, 0);
   const done  = allMods.reduce((s,m)=>s+m.lessons.filter(l=>p[l.id]).length, 0);
   const elDone  = document.getElementById('global-done');
@@ -609,7 +684,7 @@ function buildSubjectContent(modules, containerId) {
       <div class="module-dot" style="background:${mod.color}"></div>
       <div>
         <div class="module-name" style="color:${mod.color}">${mod.title}</div>
-        <div class="module-sub-label">${mod.subtitle}</div>
+        ${mod.subtitle ? `<div class="module-sub-label">${mod.subtitle}</div>` : ''}
       </div>
       <div class="module-prog-inline">
         <div class="bar"><div class="fill" style="background:${mod.color};width:${pct}%" id="mpf-${mod.id}"></div></div>
@@ -650,7 +725,7 @@ function buildCard(lesson, mod, p) {
   card.className = 'lesson-card' + (watched ? ' watched' : '');
   card.id = `card-${lesson.id}`;
 
-  const modTag = `${mod.title} · ${mod.subtitle}`;
+  const modTag = mod.subtitle ? `${mod.title} · ${mod.subtitle}` : mod.title;
   const yoursBadge = lesson.yours
     ? `<span class="card-yours-badge">🔗 Seu link</span>` : '';
 
@@ -714,6 +789,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   buildSubjectContent(DESIGN_MODULES,  'dg-content');
   buildSubjectContent(SOCIAL_MODULES,  'sm-content');
   buildSubjectContent(COPY_MODULES,    'cp-content');
+  buildSubjectContent(IA_MODULES,      'ia-content');
 
   // Configura formulário de login
   setupLogin();
