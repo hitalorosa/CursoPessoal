@@ -3,11 +3,10 @@
    app.js — Dados + Lógica
    ============================================================ */
 
-// ── SENHA TEMPORÁRIA (será substituída pelo Supabase Auth) ──
-const APP_PASSWORD = 'Vante2026';
-
-// ── CHAVE DE PROGRESSO NO LOCALSTORAGE ──
-const STORE_KEY = 'vante_progress_v2';
+// ── SUPABASE ──
+const SUPABASE_URL = 'https://hkcutqjnxxmmfxoiucrv.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_M_JHR0OY_4GPnJ2GVPrCMg_bLh4nMJx';
+const _sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // ── THUMBNAIL HELPER ──
 const thumb = id => `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
@@ -270,11 +269,41 @@ const DESIGN_MODULES = [
 // ESTADO GLOBAL
 // ============================================================
 let currentSubject = 'trafego'; // 'trafego' | 'design'
+let _progressCache = {};        // carregado do Supabase após login
+let _saveTimer = null;          // debounce para salvar no Supabase
 
-function getProgress() {
-  try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch { return {}; }
+function getProgress() { return _progressCache; }
+
+function saveProgress(p) {
+  _progressCache = p;
+  // Salva localmente como cache offline
+  try { localStorage.setItem('vante_progress_cache', JSON.stringify(p)); } catch {}
+  // Salva no Supabase com debounce de 800ms
+  clearTimeout(_saveTimer);
+  _saveTimer = setTimeout(async () => {
+    const { data: { user } } = await _sb.auth.getUser();
+    if (!user) return;
+    await _sb.from('progress').upsert(
+      { user_id: user.id, data: p, updated_at: new Date().toISOString() },
+      { onConflict: 'user_id' }
+    );
+  }, 800);
 }
-function saveProgress(p) { localStorage.setItem(STORE_KEY, JSON.stringify(p)); }
+
+async function loadProgressFromDB() {
+  const { data: { user } } = await _sb.auth.getUser();
+  if (user) {
+    const { data } = await _sb.from('progress')
+      .select('data').eq('user_id', user.id).single();
+    if (data?.data) {
+      _progressCache = data.data;
+      try { localStorage.setItem('vante_progress_cache', JSON.stringify(data.data)); } catch {}
+      return;
+    }
+  }
+  // Fallback: cache local offline
+  try { _progressCache = JSON.parse(localStorage.getItem('vante_progress_cache')) || {}; } catch {}
+}
 
 function countTotal(modules) { return modules.reduce((s,m)=>s+m.lessons.length,0); }
 function countDone(modules, p) {
@@ -282,35 +311,69 @@ function countDone(modules, p) {
 }
 
 // ============================================================
-// RENDER — LOGIN
+// RENDER — LOGIN (Supabase Auth)
 // ============================================================
 function setupLogin() {
-  const form    = document.getElementById('login-form');
-  const input   = document.getElementById('pwd-input');
-  const eyeBtn  = document.getElementById('eye-btn');
-  const errMsg  = document.getElementById('login-error');
+  const form     = document.getElementById('login-form');
+  const emailIn  = document.getElementById('email-input');
+  const pwdIn    = document.getElementById('pwd-input');
+  const eyeBtn   = document.getElementById('eye-btn');
+  const eyeShow  = document.getElementById('eye-show');
+  const eyeHide  = document.getElementById('eye-hide');
+  const errMsg   = document.getElementById('login-error');
+  const btnLogin = document.getElementById('btn-login');
 
+  // Toggle visibilidade da senha
   eyeBtn.addEventListener('click', () => {
-    const show = input.type === 'password';
-    input.type = show ? 'text' : 'password';
-    eyeBtn.innerHTML = show
-      ? `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 4.411m0 0L21 21"/></svg>`
-      : `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>`;
+    const isPassword = pwdIn.type === 'password';
+    pwdIn.type = isPassword ? 'text' : 'password';
+    eyeShow.style.display = isPassword ? 'none' : '';
+    eyeHide.style.display = isPassword ? '' : 'none';
   });
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    if (input.value === APP_PASSWORD) {
-      document.getElementById('login-screen').style.display = 'none';
-      document.getElementById('app-screen').classList.add('visible');
-      renderApp();
-    } else {
+    btnLogin.textContent = 'Entrando…';
+    btnLogin.disabled = true;
+    errMsg.classList.remove('show');
+
+    const { error } = await _sb.auth.signInWithPassword({
+      email:    emailIn.value.trim(),
+      password: pwdIn.value,
+    });
+
+    if (error) {
       errMsg.classList.add('show');
-      input.value = '';
-      input.focus();
-      setTimeout(() => errMsg.classList.remove('show'), 3000);
+      pwdIn.value = '';
+      pwdIn.focus();
+      setTimeout(() => errMsg.classList.remove('show'), 4000);
+      btnLogin.textContent = 'Entrar';
+      btnLogin.disabled = false;
+    } else {
+      await enterApp();
     }
   });
+}
+
+async function enterApp() {
+  // Carrega progresso do Supabase
+  await loadProgressFromDB();
+
+  // Atualiza nome do usuário na sidebar
+  const { data: { user } } = await _sb.auth.getUser();
+  if (user) {
+    const email = user.email || '';
+    const name  = email.split('@')[0];
+    const avatar = name.charAt(0).toUpperCase();
+    const el = document.getElementById('user-name');
+    const av = document.getElementById('user-avatar');
+    if (el) el.textContent = name;
+    if (av) av.textContent = avatar;
+  }
+
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('app-screen').classList.add('visible');
+  renderApp();
 }
 
 // ============================================================
@@ -334,11 +397,17 @@ function renderApp() {
   });
 
   // Logout
-  document.getElementById('btn-logout').addEventListener('click', () => {
+  document.getElementById('btn-logout').addEventListener('click', async () => {
+    await _sb.auth.signOut();
+    _progressCache = {};
     document.getElementById('app-screen').classList.remove('visible');
     document.getElementById('login-screen').style.display = 'flex';
     const pwdInput = document.getElementById('pwd-input');
+    const emailInput = document.getElementById('email-input');
     if (pwdInput) pwdInput.value = '';
+    if (emailInput) emailInput.value = '';
+    const btn = document.getElementById('btn-login');
+    if (btn) { btn.textContent = 'Entrar'; btn.disabled = false; }
   });
 }
 
@@ -491,9 +560,17 @@ function updateModuleProgress(mod) {
 // ============================================================
 // INIT
 // ============================================================
-document.addEventListener('DOMContentLoaded', () => {
-  setupLogin();
+document.addEventListener('DOMContentLoaded', async () => {
+  // Pré-renderiza os cards (sem progresso ainda)
   buildSubjectContent(TRAFEGO_MODULES, 'tp-content');
   buildSubjectContent(DESIGN_MODULES,  'dg-content');
-  updateGlobalProgress();
+
+  // Configura formulário de login
+  setupLogin();
+
+  // Verifica se já há sessão ativa (token salvo no navegador)
+  const { data: { session } } = await _sb.auth.getSession();
+  if (session) {
+    await enterApp();
+  }
 });
