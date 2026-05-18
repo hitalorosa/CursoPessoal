@@ -516,6 +516,93 @@ const IA_MODULES = [
   },
 ];
 
+// ============================================================
+// DADOS — AGÊNCIA & NEGÓCIOS (39 aulas)
+// ============================================================
+const AGENCIA_MODULES = [
+  {
+    id: 'ag-m1', color: '#6366f1',
+    title: 'Módulo 1', subtitle: 'Estruturação Legal e de Processos',
+    lessons: [
+      { id:'ag-1-1', title:'Como Montar uma Agência de Marketing do Absoluto ZERO',                  desc:'Da ideia à execução: passo a passo completo para montar uma agência do zero.',           url:'https://www.youtube.com/watch?v=-1GpZ953SvQ', vid:'-1GpZ953SvQ' },
+      { id:'ag-1-2', title:'Passo a Passo Para Criar Sua Agência de Marketing Digital do Zero',      desc:'Roteiro completo e atualizado para estruturar sua agência de marketing digital.',        url:'https://www.youtube.com/watch?v=-0U6ypqGmZc', vid:'-0U6ypqGmZc' },
+      { id:'ag-1-3', title:'Como Abrir uma Empresa para Marketing Digital — CNPJ Digital',           desc:'Como abrir o CNPJ da sua agência de marketing de forma 100% digital e sem burocracia.',  url:'https://www.youtube.com/watch?v=bs_GGr2JvzY', vid:'bs_GGr2JvzY' },
+      { id:'ag-1-4', title:'Como Abrir um CNPJ para Marketing Digital — Passo a Passo',             desc:'Tutorial completo para abrir seu CNPJ e formalizar sua atuação no mercado digital.',     url:'https://www.youtube.com/watch?v=kxF8qA2d9Uc', vid:'kxF8qA2d9Uc' },
+      { id:'ag-1-5', title:'CNPJ para Marketing Digital: Qual o Melhor Momento para Abrir?',        desc:'Quando abrir o CNPJ, qual tipo escolher e os custos envolvidos para iniciantes.',         url:'https://www.youtube.com/watch?v=5ou8LJnH_FE', vid:'5ou8LJnH_FE' },
+    ]
+  },
+  {
+    id: 'ag-m2', color: '#f97316',
+    title: 'Módulo 2', subtitle: 'Estratégias de Prospecção e Captação',
+    lessons: [
+      { id:'ag-2-1', title:'Script Poderoso de Prospecção por WhatsApp e Instagram para Agências',   desc:'Script testado e validado para abordar clientes via WhatsApp e Instagram com eficiência.',url:'https://www.youtube.com/watch?v=EqEj5dE7QCE', vid:'EqEj5dE7QCE' },
+      { id:'ag-2-2', title:'Como Prospectar Clientes Para Sua Agência De Marketing Digital',         desc:'6 fases de prospecção com dificuldade crescente usando o Método Ocea para agências.',    url:'https://www.youtube.com/watch?v=dx0GISnaA7A', vid:'dx0GISnaA7A' },
+      { id:'ag-2-3', title:'Como Conseguir Clientes com o Método de Prospecção Outbound',           desc:'Método outbound completo para prospecção ativa e captação de clientes de alto valor.',   url:'https://www.youtube.com/watch?v=Y-Qm6_7FjDo', vid:'Y-Qm6_7FjDo' },
+      { id:'ag-2-4', title:'Como Atrair Mais Clientes para a Sua Agência de Marketing Digital',     desc:'Estratégias de atração e captação de clientes para agências de marketing em crescimento.',url:'https://www.youtube.com/watch?v=7e6FkTS_43M', vid:'7e6FkTS_43M' },
+      { id:'ag-2-5', title:'5 Estratégias para Prospectar Clientes de Maneira Efetiva em 2024',     desc:'As cinco estratégias de prospecção mais eficientes para agências de marketing digital.',  url:'https://www.youtube.com/watch?v=HVXSg8at1A0', vid:'HVXSg8at1A0' },
+      { id:'ag-2-6', title:'A Rotina de Prospecção para Ter Mais Clientes na Sua Agência',          desc:'Como criar e manter uma rotina diária de prospecção para crescimento consistente.',       url:'https://www.youtube.com/watch?v=sIGzUaFCl8Q', vid:'sIGzUaFCl8Q' },
+    ]
+  },
+  {
+    id: 'ag-m3', color: '#10b981',
+    title: 'Módulo 3', subtitle: 'Reunião e Fechamento de Contratos',
+    lessons: [
+      { id:'ag-3-1', title:'Agência de Marketing Digital — Como Fechar um Contrato de R$ 26.851',   desc:'Case real de como fechar um contrato de alto valor e estruturar a proposta vencedora.',   url:'https://www.youtube.com/watch?v=Qk4-NisAKvk', vid:'Qk4-NisAKvk' },
+      { id:'ag-3-2', title:'Como Vender Serviços de Marketing Digital de ALTO VALOR (High Ticket)',  desc:'Técnicas avançadas para identificar, abordar e fechar clientes de alto valor no digital.', url:'https://www.youtube.com/watch?v=HHC-P_v0Rjw', vid:'HHC-P_v0Rjw' },
+      { id:'ag-3-3', title:'Script de Vendas PRONTO Para Vender Muito Mais',                        desc:'Como criar um script de vendas pronto em minutos para qualquer segmento de negócio.',    url:'https://www.youtube.com/watch?v=XeyZ-i-cI74', vid:'XeyZ-i-cI74' },
+      { id:'ag-3-4', title:'Como Vender High Ticket em 2025 — Estratégia Matadora',                 desc:'Estratégia completa para vender contratos de alto valor e atingir clientes qualificados.', url:'https://www.youtube.com/watch?v=La5bqkOaJeo', vid:'La5bqkOaJeo' },
+      { id:'ag-3-5', title:'[GESTOR DE TRÁFEGO] O Script de Reunião que Fecha Contratos',           desc:'Script de reunião validado especialmente para gestores de tráfego fecharem contratos.',   url:'https://www.youtube.com/watch?v=BMWfNVOhzn8', vid:'BMWfNVOhzn8' },
+    ]
+  },
+  {
+    id: 'ag-m4', color: '#3b82f6',
+    title: 'Módulo 4', subtitle: 'Entrega e Atendimento ao Cliente',
+    lessons: [
+      { id:'ag-4-1', title:'ONBOARDING DE CLIENTES: Tudo que Você Precisa Saber',                   desc:'Guia completo de onboarding: como receber novos clientes e garantir ótima primeira impressão.',url:'https://www.youtube.com/watch?v=bb-aR3xNtDQ',vid:'bb-aR3xNtDQ'},
+      { id:'ag-4-2', title:'Jornada do Cliente: Do Onboarding ao Ongoing — Melhores Práticas',      desc:'Webinar completo cobrindo todas as fases do ciclo de vida do cliente na agência.',        url:'https://www.youtube.com/watch?v=gZspd4I17cA', vid:'gZspd4I17cA' },
+      { id:'ag-4-3', title:'Churn — Como Evitar o Cancelamento de Contratos na Sua Agência',        desc:'Por que mais da metade das agências perdem clientes e como evitar o churn na prática.',  url:'https://www.youtube.com/watch?v=LIpUq6wF3Y4', vid:'LIpUq6wF3Y4' },
+      { id:'ag-4-4', title:'Transforme seus Clientes em Fãs — Onboarding Passo a Passo',            desc:'Guia passo a passo para criar um processo de onboarding que transforma clientes em fãs.', url:'https://www.youtube.com/watch?v=LKvxRuvBHBU', vid:'LKvxRuvBHBU' },
+      { id:'ag-4-5', title:'Onboarding em Agência Digital — Comece com o Pé Direito',               desc:'Como fazer o onboarding de clientes em agências digitais e garantir retenção de longo prazo.',url:'https://www.youtube.com/watch?v=T8Qf_KKPCzU',vid:'T8Qf_KKPCzU'},
+      { id:'ag-4-6', title:'Faça a Retenção de Clientes do Jeito Certo',                            desc:'Estratégias comprovadas de retenção que os negócios de maior sucesso utilizam.',          url:'https://www.youtube.com/watch?v=xKA-BiEAJWE', vid:'xKA-BiEAJWE' },
+    ]
+  },
+  {
+    id: 'ag-m5', color: '#f59e0b',
+    title: 'Módulo 5', subtitle: 'Precificação e Orçamentos de Marketing',
+    lessons: [
+      { id:'ag-5-1', title:'Como Precificar e Cobrar por Serviços de Marketing Digital',            desc:'Modelos de precificação, quando usar cada um e como calcular o valor justo dos seus serviços.',url:'https://www.youtube.com/watch?v=lFC8rVYtsOY',vid:'lFC8rVYtsOY'},
+      { id:'ag-5-2', title:'QUANTO COBRAR — Serviços e Freelas de Marketing Digital',               desc:'Como definir estratégias de precificação para ganhar mais como profissional ou agência.',  url:'https://www.youtube.com/watch?v=2mAef3wGQ7M', vid:'2mAef3wGQ7M' },
+      { id:'ag-5-3', title:'Como Definir Precificação para Serviços de Marketing Digital',          desc:'Metodologia completa para precificar serviços de marketing com margem de lucro saudável.',url:'https://www.youtube.com/watch?v=_Nqa6P8V1PQ', vid:'_Nqa6P8V1PQ' },
+      { id:'ag-5-4', title:'COMO COBRAR POR SERVIÇOS DE MARKETING DIGITAL — 3 Formas Simples',     desc:'As três principais formas de cobrar por serviços: fee, comissão e performance.',           url:'https://www.youtube.com/watch?v=F-sOeExroFI', vid:'F-sOeExroFI' },
+      { id:'ag-5-5', title:'Como Cobrar pela Gestão de Google Ads e Facebook Ads',                  desc:'As 3 formas de cobrar pela gestão de anúncios e como escolher o melhor modelo para você.', url:'https://www.youtube.com/watch?v=y3M-uLLChgI', vid:'y3M-uLLChgI' },
+      { id:'ag-5-6', title:'Quanto Cobrar pelo Seu Serviço de Marketing Digital?',                  desc:'Como pensar a precificação além dos custos: margem, posicionamento e percepção de valor.', url:'https://www.youtube.com/watch?v=Y1gDoBxlu9I', vid:'Y1gDoBxlu9I' },
+    ]
+  },
+  {
+    id: 'ag-m6', color: '#8b5cf6',
+    title: 'Módulo 6', subtitle: 'Gestão Financeira da Empresa',
+    lessons: [
+      { id:'ag-6-1', title:'Planejamento Financeiro para Agências de Marketing e Comunicação',      desc:'Webinar completo sobre gestão financeira para evitar que a falta de planejamento destrua a agência.',url:'https://www.youtube.com/watch?v=XMrzmioQSao',vid:'XMrzmioQSao'},
+      { id:'ag-6-2', title:'Como Organizar as FINANÇAS da Sua EMPRESA — Passo a Passo Simples',     desc:'Guia prático para empreendedores organizarem as finanças da empresa de forma eficiente.',  url:'https://www.youtube.com/watch?v=pncp4qij7sM', vid:'pncp4qij7sM' },
+      { id:'ag-6-3', title:'A Diferença entre LUCRO e FLUXO DE CAIXA — Entenda de Vez',            desc:'Conceito essencial: por que ter lucro não significa ter dinheiro no caixa da empresa.',    url:'https://www.youtube.com/watch?v=gM931j0NLrE', vid:'gM931j0NLrE' },
+      { id:'ag-6-4', title:'Planilha de Fluxo de Caixa e Controle Financeiro Pessoal e Empresarial',desc:'Planilha gratuita de fluxo de caixa para controlar entradas e saídas da sua agência.',   url:'https://www.youtube.com/watch?v=rWmYz2m8O2w', vid:'rWmYz2m8O2w' },
+      { id:'ag-6-5', title:'Pró-labore x Lucros e Dividendos — Como Organizar Retiradas da Empresa',desc:'As duas formas de retirar dinheiro da empresa e como separar finanças pessoais e empresariais.',url:'https://www.youtube.com/watch?v=c9AU7Pbp-kU',vid:'c9AU7Pbp-kU'},
+      { id:'ag-6-6', title:'Domine o Fluxo de Caixa — Dicas Práticas para as Finanças da Empresa', desc:'Dicas práticas para criar, organizar e analisar o fluxo de caixa e manter a saúde financeira.', url:'https://www.youtube.com/watch?v=d1H471Z7oko', vid:'d1H471Z7oko' },
+    ]
+  },
+  {
+    id: 'ag-m7', color: '#ec4899',
+    title: 'Módulo 7', subtitle: 'Operação e Escala da Agência',
+    lessons: [
+      { id:'ag-7-1', title:'Zero Churn: Como Crescer e Multiplicar Resultados Sem Perder Clientes', desc:'Estratégia de crescimento focada em retenção para escalar a agência com previsibilidade.',  url:'https://www.youtube.com/watch?v=3Nj1VssYduQ', vid:'3Nj1VssYduQ' },
+      { id:'ag-7-2', title:'Como Reduzir o Churn e Escalar com Estratégias de Retenção Avançadas',  desc:'Táticas usadas pelas maiores empresas SaaS para reduzir cancelamentos e acelerar crescimento.',url:'https://www.youtube.com/watch?v=moyivPzSwhs',vid:'moyivPzSwhs'},
+      { id:'ag-7-3', title:'Estratégias para Fazer Onboarding de Clientes em Escala',               desc:'Como padronizar o processo de onboarding para atender múltiplos clientes simultaneamente.', url:'https://www.youtube.com/watch?v=QjRvCs90d10', vid:'QjRvCs90d10' },
+      { id:'ag-7-4', title:'O que é Retenção de Clientes e Como Implementar na Sua Agência',        desc:'Conceito e implementação prática de estratégias de retenção para agências em crescimento.',  url:'https://www.youtube.com/watch?v=CvMfAhxzMvg', vid:'CvMfAhxzMvg' },
+      { id:'ag-7-5', title:'Como Organizar o Financeiro da Sua Empresa para Escalar com Segurança', desc:'Como estruturar o financeiro da agência para crescer sem perder o controle das contas.',    url:'https://www.youtube.com/watch?v=nKW8tvM3mSc', vid:'nKW8tvM3mSc' },
+    ]
+  },
+];
+
 function countTotal(modules) { return modules.reduce((s,m)=>s+m.lessons.length,0); }
 function countDone(modules, p) {
   return modules.reduce((s,m)=>s+m.lessons.filter(l=>p[l.id]).length,0);
@@ -637,6 +724,7 @@ function updateTabCounts() {
     { id: 'sm-tab-count', mods: SOCIAL_MODULES  },
     { id: 'cp-tab-count', mods: COPY_MODULES    },
     { id: 'ia-tab-count', mods: IA_MODULES      },
+    { id: 'ag-tab-count', mods: AGENCIA_MODULES },
   ];
   sets.forEach(({ id, mods }) => {
     const el = document.getElementById(id);
@@ -646,7 +734,7 @@ function updateTabCounts() {
 
 function updateGlobalProgress() {
   const p     = getProgress();
-  const allMods = [...TRAFEGO_MODULES, ...DESIGN_MODULES, ...SOCIAL_MODULES, ...COPY_MODULES, ...IA_MODULES];
+  const allMods = [...TRAFEGO_MODULES, ...DESIGN_MODULES, ...SOCIAL_MODULES, ...COPY_MODULES, ...IA_MODULES, ...AGENCIA_MODULES];
   const total = allMods.reduce((s,m)=>s+m.lessons.length, 0);
   const done  = allMods.reduce((s,m)=>s+m.lessons.filter(l=>p[l.id]).length, 0);
   const elDone  = document.getElementById('global-done');
@@ -790,6 +878,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   buildSubjectContent(SOCIAL_MODULES,  'sm-content');
   buildSubjectContent(COPY_MODULES,    'cp-content');
   buildSubjectContent(IA_MODULES,      'ia-content');
+  buildSubjectContent(AGENCIA_MODULES, 'ag-content');
 
   // Configura formulário de login
   setupLogin();
