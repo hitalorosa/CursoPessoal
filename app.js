@@ -266,9 +266,146 @@ const DESIGN_MODULES = [
 ];
 
 // ============================================================
+// DADOS — SOCIAL MEDIA (32 aulas)
+// ============================================================
+const SOCIAL_MODULES = [
+  {
+    id: 'sm-m1', color: '#f97316',
+    title: 'Módulo 1', subtitle: 'Profissão e Fundamentos',
+    lessons: [
+      { id:'sm-1-1', title:'O que um Social Media Faz? Entenda a Profissão em 2026',          desc:'Entenda de vez o que faz um social media, responsabilidades e mercado de trabalho.',    url:'https://www.youtube.com/watch?v=__wJcTHtLL0', vid:'__wJcTHtLL0' },
+      { id:'sm-1-2', title:'Como começar como Social Media em 2025',                           desc:'Guia prático para entrar na profissão de social media sem experiência prévia.',           url:'https://www.youtube.com/watch?v=MEuP0IgUCCA',  vid:'MEuP0IgUCCA'  },
+      { id:'sm-1-3', title:'SOCIAL MEDIA: Por ONDE COMEÇAR SUA CARREIRA em 2025',             desc:'Roteiro completo para iniciar a carreira de social media com foco e estratégia.',        url:'https://www.youtube.com/watch?v=CEwgOI_t2Bw',  vid:'CEwgOI_t2Bw'  },
+      { id:'sm-1-4', title:'O que você precisa ESTUDAR para ser SOCIAL MEDIA em 2025',        desc:'Habilidades, ferramentas e conhecimentos essenciais para o social media moderno.',       url:'https://www.youtube.com/watch?v=jX4u-ZgQdrM',  vid:'jX4u-ZgQdrM'  },
+      { id:'sm-1-5', title:'Como COMEÇAR a trabalhar como SOCIAL MEDIA — do zero',            desc:'Experiência real de quem começou do zero na carreira de social media.',                  url:'https://www.youtube.com/watch?v=rol7s2FV2FE',  vid:'rol7s2FV2FE'  },
+      { id:'sm-1-6', title:'Trabalho de SOCIAL MEDIA NA PRÁTICA: Processos e Organização',   desc:'Bastidores da rotina profissional: processos, organização e entrega para clientes.',     url:'https://www.youtube.com/watch?v=CkPEY_M9nuo',  vid:'CkPEY_M9nuo'  },
+    ]
+  },
+  {
+    id: 'sm-m2', color: '#ec4899',
+    title: 'Módulo 2', subtitle: 'Estratégia de Conteúdo',
+    lessons: [
+      { id:'sm-2-1', title:'COMO DESENVOLVER UMA ESTRATÉGIA DE SOCIAL MEDIA',                 desc:'Passo a passo para criar uma estratégia de social media orientada a resultados.',        url:'https://www.youtube.com/watch?v=mPcqfh-SmOc',  vid:'mPcqfh-SmOc'  },
+      { id:'sm-2-2', title:'Como Desenvolver uma Estratégia de Social Media PASSO a PASSO',   desc:'Metodologia completa para planejar e executar estratégias de conteúdo nas redes.',       url:'https://www.youtube.com/watch?v=v96WG7OfgxU',  vid:'v96WG7OfgxU'  },
+      { id:'sm-2-3', title:'5 ESTRATÉGIAS DE CONTEÚDO QUE TODO SOCIAL MEDIA PRECISA CONHECER',desc:'As cinco estratégias fundamentais que todo profissional de social media deve dominar.',  url:'https://www.youtube.com/watch?v=RD91npm7xig',  vid:'RD91npm7xig'  },
+      { id:'sm-2-4', title:'Como criar uma ESTRATÉGIA DE CONTEÚDO em 10 PASSOS',              desc:'Metodologia em 10 passos para criar estratégias de conteúdo eficazes e consistentes.',  url:'https://www.youtube.com/watch?v=OntLfvp2Rn0',  vid:'OntLfvp2Rn0'  },
+      { id:'sm-2-5', title:'Aula 01 — Como criar uma estratégia de conteúdo em 10 passos',    desc:'Primeira aula do curso sobre estratégia de conteúdo: visão geral e fundamentos.',        url:'https://www.youtube.com/watch?v=VfQoUzD1pps',  vid:'VfQoUzD1pps'  },
+      { id:'sm-2-6', title:'O básico que ninguém faz — 10 passos para ser Social Media em 2026',desc:'Os erros mais comuns e o que você precisa fazer de diferente para se destacar.',       url:'https://www.youtube.com/watch?v=n782N5GMtrk',  vid:'n782N5GMtrk'  },
+    ]
+  },
+  {
+    id: 'sm-m3', color: '#8b5cf6',
+    title: 'Módulo 3', subtitle: 'Instagram — Crescimento e Algoritmo',
+    lessons: [
+      { id:'sm-3-1',  title:'Nova Atualização do Instagram 2025: Mudanças no Algoritmo',       desc:'O que mudou no algoritmo do Instagram e como adaptar sua estratégia de conteúdo.',      url:'https://www.youtube.com/watch?v=ovZcx2YtZis',  vid:'ovZcx2YtZis'  },
+      { id:'sm-3-2',  title:'A Verdade sobre o algoritmo do Instagram em 2025',                desc:'O que ninguém está te contando sobre o algoritmo e como usar isso a seu favor.',         url:'https://www.youtube.com/watch?v=gFsHKTn_NBk',  vid:'gFsHKTn_NBk'  },
+      { id:'sm-3-3',  title:'O Algoritmo do Instagram Finalmente Explicado',                   desc:'Explicação completa do algoritmo do Instagram para Feed, Reels, Explore e Stories.',    url:'https://www.youtube.com/watch?v=UegzypfYi5A',  vid:'UegzypfYi5A'  },
+      { id:'sm-3-4',  title:'Como Crescer no Instagram em 2026 (Sem Tráfego Pago)',            desc:'Estratégias orgânicas atualizadas para crescer no Instagram sem gastar com anúncios.',  url:'https://www.youtube.com/watch?v=ie2xhtwxoYo',  vid:'ie2xhtwxoYo'  },
+      { id:'sm-3-5',  title:'Como CRESCER RÁPIDO no Instagram DO ZERO em 2026 — Passo a Passo',desc:'Guia completo para crescer do zero no Instagram com consistência e estratégia.',        url:'https://www.youtube.com/watch?v=_zd7BuQu_fg',  vid:'_zd7BuQu_fg'  },
+      { id:'sm-3-6',  title:'NOVO Algoritmo do Instagram! Como VENDER e CRESCER com Conteúdo', desc:'Como usar o algoritmo a seu favor para vender e crescer com conteúdo orgânico.',        url:'https://www.youtube.com/watch?v=hyPRLudjGT8',  vid:'hyPRLudjGT8'  },
+      { id:'sm-3-7',  title:'Como CRESCER no INSTAGRAM em 2025: Estratégias ATUALIZADAS',      desc:'Estratégias atualizadas para crescimento sólido e consistente no Instagram.',           url:'https://www.youtube.com/watch?v=E9zEGb-6O-4',  vid:'E9zEGb-6O-4'  },
+      { id:'sm-3-8',  title:'7 dicas de como aumentar o engajamento no Instagram em 2025',     desc:'Técnicas práticas para aumentar curtidas, comentários e compartilhamentos.',            url:'https://www.youtube.com/watch?v=c5ax_9QUUoI',  vid:'c5ax_9QUUoI'  },
+      { id:'sm-3-9',  title:'Como Bombar no Instagram em 2025: Novas Estratégias e Tendências',desc:'Tendências e estratégias atuais para bombar o perfil e alcançar novos seguidores.',     url:'https://www.youtube.com/watch?v=A9sqWbxKFj8',  vid:'A9sqWbxKFj8'  },
+      { id:'sm-3-10', title:'O NOVO ALGORITMO dos STORIES 2024 — Guia Definitivo',             desc:'Como funciona o algoritmo dos Stories e como usá-lo para aumentar visualizações.',      url:'https://www.youtube.com/watch?v=sqUkv9wPWQU',  vid:'sqUkv9wPWQU'  },
+    ]
+  },
+  {
+    id: 'sm-m4', color: '#10b981',
+    title: 'Módulo 4', subtitle: 'Calendário Editorial e Planejamento',
+    lessons: [
+      { id:'sm-4-1', title:'Como Criar Um CALENDÁRIO EDITORIAL para as Redes Sociais',        desc:'Como montar um calendário editorial eficiente para manter consistência nas redes.',     url:'https://www.youtube.com/watch?v=NmLcA0LRY64',  vid:'NmLcA0LRY64'  },
+      { id:'sm-4-2', title:'SOCIAL MEDIA — COMO MONTAR CRONOGRAMA DE CONTEÚDO',               desc:'Processo prático de criação de cronograma de conteúdo para clientes de social media.',  url:'https://www.youtube.com/watch?v=0TgAj66AavE',  vid:'0TgAj66AavE'  },
+      { id:'sm-4-3', title:'Planejamento para Redes Sociais — Template de Calendário Editorial',desc:'Template completo de calendário editorial com 4 passos para planejamento estratégico.',url:'https://www.youtube.com/watch?v=GW3AwVTz_d8',  vid:'GW3AwVTz_d8'  },
+      { id:'sm-4-4', title:'Como criar um Planejamento Estratégico para as redes sociais',    desc:'Passo a passo completo para criar planejamento estratégico de redes sociais eficaz.',   url:'https://www.youtube.com/watch?v=pd7TQ-rwQyo',  vid:'pd7TQ-rwQyo'  },
+      { id:'sm-4-5', title:'Gestão de Conteúdo para Redes Sociais 2024',                      desc:'Como organizar e gerenciar a produção de conteúdo para múltiplas redes sociais.',       url:'https://www.youtube.com/watch?v=-1gjaW30xGM',  vid:'-1gjaW30xGM'  },
+    ]
+  },
+  {
+    id: 'sm-m5', color: '#3b82f6',
+    title: 'Módulo 5', subtitle: 'Métricas, Ferramentas e Agendamento',
+    lessons: [
+      { id:'sm-5-1', title:'5 FERRAMENTAS PARA ANALISAR MÉTRICAS DAS REDES SOCIAIS',          desc:'As melhores ferramentas gratuitas e pagas para analisar métricas de redes sociais.',    url:'https://www.youtube.com/watch?v=exL-RgeGOpg',  vid:'exL-RgeGOpg'  },
+      { id:'sm-5-2', title:'5 FERRAMENTAS GRATUITAS PARA AGENDAR POSTS',                      desc:'Conheça 5 ferramentas gratuitas para agendar posts e organizar sua rotina de conteúdo.', url:'https://www.youtube.com/watch?v=WwPUqg-mgWk',  vid:'WwPUqg-mgWk'  },
+      { id:'sm-5-3', title:'Como Agendar Posts Usando Canva — Planejador de Conteúdo',        desc:'Tutorial completo de como usar o Canva para agendar posts direto na plataforma.',        url:'https://www.youtube.com/watch?v=htkx0B8GWHA',  vid:'htkx0B8GWHA'  },
+      { id:'sm-5-4', title:'Agendar posts no TikTok, Instagram, YouTube, Facebook e LinkedIn',desc:'Como usar o mLabs para agendar posts em todas as principais redes sociais de uma vez.',  url:'https://www.youtube.com/watch?v=pCPgZ-BoABw',  vid:'pCPgZ-BoABw'  },
+      { id:'sm-5-5', title:'Como agendar posts no TikTok — Nova Ferramenta',                  desc:'Passo a passo para agendar publicações no TikTok usando a ferramenta nativa.',          url:'https://www.youtube.com/watch?v=C4CX7-aK4y8',  vid:'C4CX7-aK4y8'  },
+    ]
+  },
+];
+
+// ============================================================
+// DADOS — COPYWRITING (27 aulas)
+// ============================================================
+const COPY_MODULES = [
+  {
+    id: 'cp-m1', color: '#f59e0b',
+    title: 'Módulo 1', subtitle: 'O que é Copy e Como Começar',
+    lessons: [
+      { id:'cp-1-1', title:'Copywriting: O que é, como funciona e como se tornar em 30 dias', desc:'Guia completo para entender o copywriting e traçar um plano de 30 dias para começar.',  url:'https://www.youtube.com/watch?v=xqkm3jwbvoQ',  vid:'xqkm3jwbvoQ'  },
+      { id:'cp-1-2', title:'Copywriter em 2024 — Vale a Pena? Como Começar na Prática?',      desc:'Análise honesta da profissão, mercado atual e os primeiros passos práticos.',            url:'https://www.youtube.com/watch?v=geHN2UM-95U',  vid:'geHN2UM-95U'  },
+      { id:'cp-1-3', title:'Como Começar Como Copywriter Profissional',                        desc:'Roteiro para profissionalizar sua carreira de copywriter do início ao primeiro cliente.', url:'https://www.youtube.com/watch?v=8ax4VqNdPCI',  vid:'8ax4VqNdPCI'  },
+      { id:'cp-1-4', title:'Como COMEÇAR RÁPIDO na Profissão COPYWRITER',                     desc:'As ações mais importantes para acelerar o início da carreira de copywriter.',            url:'https://www.youtube.com/watch?v=jnNcOhva_GE',  vid:'jnNcOhva_GE'  },
+      { id:'cp-1-5', title:'[COPYWRITING] O que eu faria para começar HOJE!',                 desc:'Conselho direto e prático de quem já está na profissão sobre os primeiros passos.',      url:'https://www.youtube.com/watch?v=RYAobekOXuo',  vid:'RYAobekOXuo'  },
+      { id:'cp-1-6', title:'AS 5 ESPECIALIZAÇÕES MAIS BEM PAGAS DO COPYWRITING EM 2025',      desc:'Quais nichos de copy pagam mais e como se posicionar em cada especialização.',           url:'https://www.youtube.com/watch?v=OPJOseqbk20',  vid:'OPJOseqbk20'  },
+      { id:'cp-1-7', title:'Curso Prático de Copywriting Para Iniciantes [100% GRATUITO]',    desc:'Curso completo e gratuito de copywriting para quem está começando do absoluto zero.',    url:'https://www.youtube.com/watch?v=43js9hV2lLc',  vid:'43js9hV2lLc'  },
+    ]
+  },
+  {
+    id: 'cp-m2', color: '#ef4444',
+    title: 'Módulo 2', subtitle: 'Gatilhos Mentais e Persuasão',
+    lessons: [
+      { id:'cp-2-1', title:'COPYWRITING E OS GATILHOS MENTAIS QUE MAIS VENDEM e PERSUADEM',   desc:'Os gatilhos mentais mais poderosos do copywriting e como aplicá-los nas suas copies.',  url:'https://www.youtube.com/watch?v=yfbZstttsYM',  vid:'yfbZstttsYM'  },
+      { id:'cp-2-2', title:'5 GATILHOS MENTAIS de COPYWRITING para VENDER MAIS',              desc:'Guia completo com os 5 gatilhos mentais mais eficazes para aumentar suas vendas.',       url:'https://www.youtube.com/watch?v=Au6YsvElzxs',  vid:'Au6YsvElzxs'  },
+      { id:'cp-2-3', title:'Curso de Copywriting Básico — Aula 2: Gatilhos Mentais',          desc:'Segunda aula do curso básico focada em como aplicar os gatilhos mentais na prática.',    url:'https://www.youtube.com/watch?v=XqmbLwB6-IE',  vid:'XqmbLwB6-IE'  },
+      { id:'cp-2-4', title:'Gatilhos Mentais — Curso de Copywriting Aula 02',                 desc:'Aula completa sobre os principais gatilhos mentais utilizados nos melhores copywriters.', url:'https://www.youtube.com/watch?v=vnDtscaUnNc',  vid:'vnDtscaUnNc'  },
+      { id:'cp-2-5', title:'Gatilho Mental da Curiosidade — CURSO DE COPYWRITING',            desc:'Como usar o gatilho da curiosidade para prender a atenção e gerar desejo no leitor.',    url:'https://www.youtube.com/watch?v=yIBcv1heaVA',  vid:'yIBcv1heaVA'  },
+      { id:'cp-2-6', title:'COPYWRITING: Como PERSUADIR, Gatilhos Mentais e Objeções',        desc:'Aula abrangente sobre persuasão, gatilhos mentais e como lidar com objeções em copy.',  url:'https://www.youtube.com/watch?v=BROtYwcONuk',  vid:'BROtYwcONuk'  },
+      { id:'cp-2-7', title:'Por que o Copywriter Deve Estudar Persuasão?',                    desc:'A relação profunda entre persuasão e copywriting e por que estudar persuasão é vital.',  url:'https://www.youtube.com/watch?v=m-KlzIAnmKg',  vid:'m-KlzIAnmKg'  },
+    ]
+  },
+  {
+    id: 'cp-m3', color: '#8b5cf6',
+    title: 'Módulo 3', subtitle: 'Headlines e Títulos que Vendem',
+    lessons: [
+      { id:'cp-3-1', title:'Como Escrever Headlines Irresistíveis (Sem Saber Nada de Copy)',  desc:'Técnicas para criar títulos que capturam atenção, geram interesse e despertam desejo.',  url:'https://www.youtube.com/watch?v=jB3zBNdJcac',  vid:'jB3zBNdJcac'  },
+      { id:'cp-3-2', title:'Como CRIAR HEADLINES QUE VENDEM: 9 Ideias de Títulos',            desc:'9 modelos práticos de headlines de alta conversão que você pode usar imediatamente.',    url:'https://www.youtube.com/watch?v=J8Y5dWnkuNU',  vid:'J8Y5dWnkuNU'  },
+      { id:'cp-3-3', title:'Como fazer uma COPY que VENDE MUITO em 3 Passos',                 desc:'Processo em 3 etapas para criar copies de vendas, conteúdo e anúncios que convertem.',  url:'https://www.youtube.com/watch?v=s-y0Pia9_Dc',  vid:'s-y0Pia9_Dc'  },
+    ]
+  },
+  {
+    id: 'cp-m4', color: '#3b82f6',
+    title: 'Módulo 4', subtitle: 'Copy para Anúncios, Páginas e VSL',
+    lessons: [
+      { id:'cp-4-1', title:'Como fazer ANÚNCIOS CRIATIVOS usando técnicas de COPYWRITING',    desc:'Como aplicar copywriting na criação de anúncios criativos que convertem nas redes.',     url:'https://www.youtube.com/watch?v=FmjLOPtFbyQ',  vid:'FmjLOPtFbyQ'  },
+      { id:'cp-4-2', title:'Como escrever COPY para Página de Vendas de ALTA CONVERSÃO',      desc:'Estrutura completa para escrever uma página de vendas persuasiva e de alta conversão.',  url:'https://www.youtube.com/watch?v=YYZ6lrkCzR4',  vid:'YYZ6lrkCzR4'  },
+      { id:'cp-4-3', title:'Copy para VSL — Criando uma Carta de Vendas em Vídeo',            desc:'Como estruturar e escrever uma VSL (Video Sales Letter) do início ao fim na prática.',  url:'https://www.youtube.com/watch?v=5Dyctg6SLHU',  vid:'5Dyctg6SLHU'  },
+      { id:'cp-4-4', title:'Copywriting: 10 Modelos de Copy para Vídeos, E-mails e Anúncios',desc:'10 modelos prontos de copy para vídeos de vendas, e-mails e anúncios que você pode adaptar.',url:'https://www.youtube.com/watch?v=2VAnwmYYwfw',vid:'2VAnwmYYwfw'},
+    ]
+  },
+  {
+    id: 'cp-m5', color: '#10b981',
+    title: 'Módulo 5', subtitle: 'Storytelling e Quebra de Objeções',
+    lessons: [
+      { id:'cp-5-1', title:'Copywriting: Storytelling e a Jornada do Herói para Vender Mais', desc:'Como usar o storytelling e a estrutura da Jornada do Herói para vender com emoção.',    url:'https://www.youtube.com/watch?v=SQXXi6fw9mA',  vid:'SQXXi6fw9mA'  },
+      { id:'cp-5-2', title:'COMO QUEBRAR OBJEÇÕES seguindo uma ESTRATÉGIA DE COPYWRITING',    desc:'Como identificar e quebrar as principais objeções do cliente usando técnicas de copy.',   url:'https://www.youtube.com/watch?v=MMJ12qlKnQU',  vid:'MMJ12qlKnQU'  },
+      { id:'cp-5-3', title:'Livro Objeções de Jeb Blount — Fundamentos Poderosos de Copy',    desc:'Os insights do livro Objeções aplicados ao copywriting para aumentar conversões.',        url:'https://www.youtube.com/watch?v=AkYNhBNBGUY',  vid:'AkYNhBNBGUY'  },
+    ]
+  },
+  {
+    id: 'cp-m6', color: '#ec4899',
+    title: 'Módulo 6', subtitle: 'Copy Avançado e Estratégias de Vendas',
+    lessons: [
+      { id:'cp-6-1', title:'Como fazer COPYWRITING? Dicas AVANÇADAS para criar um copy perfeito',desc:'Técnicas avançadas para elevar o nível das suas copies e se diferenciar no mercado.',  url:'https://www.youtube.com/watch?v=wYMS-CZ8DVI',  vid:'wYMS-CZ8DVI'  },
+      { id:'cp-6-2', title:'Estratégias de Copywriting para Vendas — 15 Técnicas',             desc:'15 técnicas avançadas de copy aplicadas diretamente a processos de vendas complexos.',   url:'https://www.youtube.com/watch?v=HpMdSp3N20Q',  vid:'HpMdSp3N20Q'  },
+      { id:'cp-6-3', title:'COPYWRITING, GATILHOS MENTAIS, PERSUASÃO E SUAS BALELAS',         desc:'Visão crítica e avançada sobre copywriting: o que realmente funciona e o que é mito.',  url:'https://www.youtube.com/watch?v=bh8aEJnLFxs',  vid:'bh8aEJnLFxs'  },
+    ]
+  },
+];
+
+// ============================================================
 // ESTADO GLOBAL
 // ============================================================
-let currentSubject = 'trafego'; // 'trafego' | 'design'
+let currentSubject = 'trafego'; // 'trafego' | 'design' | 'social' | 'copy'
 let _progressCache = {};        // carregado do Supabase após login
 let _saveTimer = null;          // debounce para salvar no Supabase
 
@@ -420,20 +557,31 @@ function switchSubject(subject) {
 
 function updateTabCounts() {
   const p = getProgress();
-  const tpDone = countDone(TRAFEGO_MODULES, p);
-  const dgDone = countDone(DESIGN_MODULES, p);
-  document.getElementById('tp-tab-count').textContent = `${tpDone}/${countTotal(TRAFEGO_MODULES)}`;
-  document.getElementById('dg-tab-count').textContent = `${dgDone}/${countTotal(DESIGN_MODULES)}`;
+  const sets = [
+    { id: 'tp-tab-count', mods: TRAFEGO_MODULES },
+    { id: 'dg-tab-count', mods: DESIGN_MODULES  },
+    { id: 'sm-tab-count', mods: SOCIAL_MODULES  },
+    { id: 'cp-tab-count', mods: COPY_MODULES    },
+  ];
+  sets.forEach(({ id, mods }) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = `${countDone(mods,p)}/${countTotal(mods)}`;
+  });
 }
 
 function updateGlobalProgress() {
-  const p = getProgress();
-  const total = countTotal(TRAFEGO_MODULES) + countTotal(DESIGN_MODULES);
-  const done  = countDone(TRAFEGO_MODULES, p) + countDone(DESIGN_MODULES, p);
-  document.getElementById('global-done').textContent = done;
-  document.getElementById('global-total').textContent = total;
-  document.getElementById('global-bar').style.width = (done/total*100)+'%';
-  document.getElementById('global-pct').textContent = Math.round(done/total*100)+'%';
+  const p     = getProgress();
+  const allMods = [...TRAFEGO_MODULES, ...DESIGN_MODULES, ...SOCIAL_MODULES, ...COPY_MODULES];
+  const total = allMods.reduce((s,m)=>s+m.lessons.length, 0);
+  const done  = allMods.reduce((s,m)=>s+m.lessons.filter(l=>p[l.id]).length, 0);
+  const elDone  = document.getElementById('global-done');
+  const elTotal = document.getElementById('global-total');
+  const elBar   = document.getElementById('global-bar');
+  const elPct   = document.getElementById('global-pct');
+  if (elDone)  elDone.textContent  = done;
+  if (elTotal) elTotal.textContent = total;
+  if (elBar)   elBar.style.width   = (total ? (done/total*100) : 0)+'%';
+  if (elPct)   elPct.textContent   = (total ? Math.round(done/total*100) : 0)+'%';
   updateTabCounts();
 }
 
@@ -564,6 +712,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Pré-renderiza os cards (sem progresso ainda)
   buildSubjectContent(TRAFEGO_MODULES, 'tp-content');
   buildSubjectContent(DESIGN_MODULES,  'dg-content');
+  buildSubjectContent(SOCIAL_MODULES,  'sm-content');
+  buildSubjectContent(COPY_MODULES,    'cp-content');
 
   // Configura formulário de login
   setupLogin();

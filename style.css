@@ -196,7 +196,10 @@ a { text-decoration: none; color: inherit; }
   border-bottom: 1px solid var(--border);
   background: var(--bg-dark);
   padding: 0 2rem;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
+.subject-tabs::-webkit-scrollbar { display: none; }
 .subject-tab {
   padding: .85rem 1.5rem; font-size: .92rem; font-weight: 600;
   color: var(--text-muted); cursor: pointer; border: none; background: none;
