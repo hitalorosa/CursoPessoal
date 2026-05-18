@@ -603,6 +603,60 @@ const AGENCIA_MODULES = [
   },
 ];
 
+// ============================================================
+// DADOS — MODELOS DE NEGÓCIO & MONETIZAÇÃO (21 aulas)
+// Estrutura diferenciada: organizada por SEGMENTOS (sem módulos)
+// ============================================================
+const NEGOCIOS_MODULES = [
+  {
+    id: 'neg-ballian', color: '#f59e0b',
+    title: 'Segmento: Ballian Business & Negócios em Vídeo', subtitle: '',
+    lessons: [
+      // ── 4 vídeos do usuário ──
+      { id:'neg-b-1',  title:'Esse Vídeo SÓ ACABA Quando eu Fizer um SALÁRIO MÍNIMO na Internet',    desc:'Challenge ao vivo: do zero ao salário mínimo na internet, mostrando cada estratégia em tempo real.',  url:'https://youtu.be/QVj-VP7ZVH4', vid:'QVj-VP7ZVH4' },
+      { id:'neg-b-2',  title:'COMO EU FAÇO 40K POR MÊS — Ideias Simples de Negócio com 100 Reais',   desc:'Como construir fontes de renda que chegam a 40k/mês partindo de ideias acessíveis e simples.',         url:'https://youtu.be/8kOdDo5YaHI', vid:'8kOdDo5YaHI' },
+      { id:'neg-b-3',  title:'Como Ganhei 5k/mês Só Copiando Vídeos dos Outros',                      desc:'Método de replicar e adaptar conteúdo de vídeo para gerar renda recorrente no YouTube.',               url:'https://youtu.be/jJjwHFdLObw', vid:'jJjwHFdLObw' },
+      { id:'neg-b-4',  title:'As MELHORES e PIORES Maneiras de Ganhar DINHEIRO na Internet (Tierlist)',desc:'Ranking honesto de todas as formas de ganhar dinheiro online: do affiliate ao canal dark.',             url:'https://youtu.be/fiF-yWArHMo', vid:'fiF-yWArHMo' },
+      // ── 6 vídeos pesquisados (canal dark + negócios em vídeo) ──
+      { id:'neg-b-5',  title:'5 NICHOS SECRETOS para MONETIZAR Canal DARK no YouTube (Alta Renda 2025)',desc:'Os 5 nichos de canal dark com maior potencial de monetização rápida e receita recorrente.',           url:'https://www.youtube.com/watch?v=kH48cFowBAk', vid:'kH48cFowBAk' },
+      { id:'neg-b-6',  title:'Como Estou Criando Canais Dark para Monetizar Rápido no YouTube',        desc:'Processo real passo a passo de criação e monetização de canais dark sem aparecer na câmera.',          url:'https://www.youtube.com/watch?v=dELIIY4SN7w', vid:'dELIIY4SN7w' },
+      { id:'neg-b-7',  title:'O PLANO PERFEITO Para Criar e Monetizar um Canal Dark RÁPIDO',           desc:'Estratégia completa para criar um canal dark do zero e atingir a monetização o mais rápido possível.', url:'https://www.youtube.com/watch?v=5yuhdYdwGcA', vid:'5yuhdYdwGcA' },
+      { id:'neg-b-8',  title:'Replique um desses 12 Canais Dark e Fique MILIONÁRIO Sem Aparecer',      desc:'12 modelos de canais dark comprovados que você pode replicar para ganhar dinheiro no YouTube.',        url:'https://www.youtube.com/watch?v=KcLu--a0gGU', vid:'KcLu--a0gGU' },
+      { id:'neg-b-9',  title:'NÃO Crie um Canal Dark no YouTube em 2026 ANTES DE VER ISSO',            desc:'Os erros mais comuns e o que você precisa saber antes de criar um canal dark em 2026.',               url:'https://www.youtube.com/watch?v=QNCHlqUVM9M', vid:'QNCHlqUVM9M' },
+      { id:'neg-b-10', title:'Como Criar um Canal Dark no YouTube que Monetiza RÁPIDO com IA',         desc:'Como usar IA para criar e escalar um canal dark e faturar até R$5.200/mês sem aparecer.',             url:'https://www.youtube.com/watch?v=YerSlC5aGGE', vid:'YerSlC5aGGE' },
+    ]
+  },
+  {
+    id: 'neg-digital', color: '#8b5cf6',
+    title: 'Segmento: Negócios Digitais & Renda Recorrente', subtitle: '',
+    lessons: [
+      { id:'neg-d-1', title:'Criando 1 Negócio DIGITAL de RENDA RECORRENTE — Me COPIE',               desc:'Como criar um negócio digital com renda recorrente do zero: modelo replicável e validado.',             url:'https://youtu.be/k8icuJVsJQg', vid:'k8icuJVsJQg' },
+      { id:'neg-d-2', title:'Criei 4 Negócios DIGITAIS de RENDA RECORRENTE — Me COPIE',               desc:'Quatro modelos de negócios digitais com receita mensal previsível que você pode replicar.',            url:'https://youtu.be/g2DjCwSg6Sg', vid:'g2DjCwSg6Sg' },
+      { id:'neg-d-3', title:'5 NEGÓCIOS DIGITAIS QUE ESTÃO EXPLODINDO EM 2026 — Quase Ninguém Faz',   desc:'Os nichos de negócios digitais mais quentes de 2026 que ainda têm baixa concorrência.',                url:'https://youtu.be/SoFu_AdO9fI', vid:'SoFu_AdO9fI' },
+      { id:'neg-d-4', title:'O FUNIL DE VENDAS MAIS FÁCIL DO MUNDO',                                   desc:'O funil de vendas mais simples e eficaz para vender produtos e serviços digitais online.',             url:'https://youtu.be/4WbbAiWY18A', vid:'4WbbAiWY18A' },
+      { id:'neg-d-5', title:'COMO GANHAR 500 REAIS POR SEMANA NO MERCADO LIVRE SENDO AFILIADO',        desc:'Estratégia completa de afiliação no Mercado Livre para gerar 500 reais por semana.',                   url:'https://youtu.be/r2F7nfDldBY', vid:'r2F7nfDldBY' },
+    ]
+  },
+  {
+    id: 'neg-ia', color: '#a855f7',
+    title: 'Segmento: Inteligência Artificial', subtitle: '',
+    lessons: [
+      { id:'neg-ia-1', title:'6 FORMAS DE GANHAR DINHEIRO COM IA SEM APARECER E SEM INVESTIR NADA',   desc:'Seis formas práticas de usar IA para gerar renda sem mostrar o rosto e sem investimento inicial.',      url:'https://youtu.be/nFwVjgcwZ88', vid:'nFwVjgcwZ88' },
+      { id:'neg-ia-2', title:'A Maneira Mais PREGUIÇOSA de Fazer Dinheiro com IA',                     desc:'O método mais simples e automatizado de monetizar inteligência artificial com mínimo esforço.',         url:'https://youtu.be/ExTka864EwI', vid:'ExTka864EwI' },
+      { id:'neg-ia-3', title:'5 MANEIRAS DE FAZER RENDA EXTRA COM IA (Inteligência Artificial) 2025',  desc:'Cinco formas comprovadas de usar IA para gerar renda extra em 2025 sem experiência técnica.',           url:'https://youtu.be/8lv3XjDh9f0', vid:'8lv3XjDh9f0' },
+    ]
+  },
+  {
+    id: 'neg-renda', color: '#10b981',
+    title: 'Segmento: Renda Extra & Trabalho Remoto', subtitle: '',
+    lessons: [
+      { id:'neg-r-1', title:'Sites para Trabalhar em Casa nas Horas Vagas Sem Aparecer nem Investir',  desc:'Plataformas reais para gerar R$4.694 trabalhando de casa, sem mostrar o rosto e sem capital inicial.',  url:'https://youtu.be/NNMBNRcP_tU', vid:'NNMBNRcP_tU' },
+      { id:'neg-r-2', title:'4 MANEIRAS DE FAZER RENDA EXTRA SEM SAIR DE CASA EM 2026',                desc:'Quatro formas validadas de gerar renda extra trabalhando remotamente em 2026.',                         url:'https://youtu.be/7pw1Ct3LAec', vid:'7pw1Ct3LAec' },
+      { id:'neg-r-3', title:'30 IDEIAS DE RENDA EXTRA PARA GANHAR DINHEIRO EM 2026',                   desc:'30 ideias práticas e variadas para gerar renda extra em 2026, do digital ao presencial.',               url:'https://youtu.be/lcT40OvwP_o', vid:'lcT40OvwP_o' },
+    ]
+  },
+];
+
 function countTotal(modules) { return modules.reduce((s,m)=>s+m.lessons.length,0); }
 function countDone(modules, p) {
   return modules.reduce((s,m)=>s+m.lessons.filter(l=>p[l.id]).length,0);
@@ -724,7 +778,8 @@ function updateTabCounts() {
     { id: 'sm-tab-count', mods: SOCIAL_MODULES  },
     { id: 'cp-tab-count', mods: COPY_MODULES    },
     { id: 'ia-tab-count', mods: IA_MODULES      },
-    { id: 'ag-tab-count', mods: AGENCIA_MODULES },
+    { id: 'ag-tab-count',  mods: AGENCIA_MODULES  },
+    { id: 'neg-tab-count', mods: NEGOCIOS_MODULES },
   ];
   sets.forEach(({ id, mods }) => {
     const el = document.getElementById(id);
@@ -734,7 +789,7 @@ function updateTabCounts() {
 
 function updateGlobalProgress() {
   const p     = getProgress();
-  const allMods = [...TRAFEGO_MODULES, ...DESIGN_MODULES, ...SOCIAL_MODULES, ...COPY_MODULES, ...IA_MODULES, ...AGENCIA_MODULES];
+  const allMods = [...TRAFEGO_MODULES, ...DESIGN_MODULES, ...SOCIAL_MODULES, ...COPY_MODULES, ...IA_MODULES, ...AGENCIA_MODULES, ...NEGOCIOS_MODULES];
   const total = allMods.reduce((s,m)=>s+m.lessons.length, 0);
   const done  = allMods.reduce((s,m)=>s+m.lessons.filter(l=>p[l.id]).length, 0);
   const elDone  = document.getElementById('global-done');
@@ -878,7 +933,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   buildSubjectContent(SOCIAL_MODULES,  'sm-content');
   buildSubjectContent(COPY_MODULES,    'cp-content');
   buildSubjectContent(IA_MODULES,      'ia-content');
-  buildSubjectContent(AGENCIA_MODULES, 'ag-content');
+  buildSubjectContent(AGENCIA_MODULES,  'ag-content');
+  buildSubjectContent(NEGOCIOS_MODULES, 'neg-content');
 
   // Configura formulário de login
   setupLogin();
