@@ -15,9 +15,8 @@
   <div id="login-screen">
     <div class="login-logo">Vante</div>
 
-    <div class="login-card">
+    <form class="login-card" id="login-form" autocomplete="off">
       <div class="login-card-title">
-        <!-- Lock icon -->
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
@@ -28,37 +27,28 @@
 
       <div class="input-wrap">
         <input
-          id="login-input"
+          id="pwd-input"
           type="password"
           placeholder="Senha de acesso"
           autocomplete="current-password"
         />
         <button class="eye-btn" id="eye-btn" aria-label="Mostrar senha" type="button">
-          <!-- Eye icon (show) -->
-          <svg id="eye-icon-show" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round">
             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
             <circle cx="12" cy="12" r="3"/>
-          </svg>
-          <!-- Eye-off icon (hide) — hidden by default -->
-          <svg id="eye-icon-hide" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-               stroke-linecap="round" stroke-linejoin="round" style="display:none">
-            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
-            <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
-            <line x1="1" y1="1" x2="23" y2="23"/>
           </svg>
         </button>
       </div>
 
       <div class="login-error" id="login-error">Senha incorreta. Tente novamente.</div>
 
-      <button class="btn-login" id="btn-login">Entrar</button>
-    </div>
+      <button class="btn-login" type="submit">Entrar</button>
+    </form>
 
     <div class="login-footer">Vante &middot; Dashboard Interno</div>
-  </div><!-- /#login-screen -->
+  </div>
 
 
   <!-- ===================== APP SCREEN ===================== -->
@@ -75,7 +65,6 @@
         <div class="nav-label">Menu</div>
 
         <button class="nav-item active" data-view="estudos">
-          <!-- BookOpen icon -->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
@@ -85,7 +74,6 @@
         </button>
 
         <button class="nav-item" data-view="home">
-          <!-- Home icon -->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
@@ -95,7 +83,6 @@
         </button>
 
         <button class="nav-item" data-view="suporte">
-          <!-- LifeBuoy icon -->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/>
@@ -112,13 +99,12 @@
       </nav>
 
       <div class="sidebar-user">
-        <div class="user-avatar" id="user-avatar">V</div>
+        <div class="user-avatar">V</div>
         <div class="user-info">
-          <div class="user-name" id="user-name">Estudante</div>
+          <div class="user-name">Estudante</div>
           <div class="user-role">Membro Vante</div>
         </div>
         <button class="btn-logout" id="btn-logout" title="Sair">
-          <!-- LogOut icon -->
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
@@ -127,7 +113,7 @@
           </svg>
         </button>
       </div>
-    </aside><!-- /.sidebar -->
+    </aside>
 
 
     <!-- MAIN CONTENT -->
@@ -135,25 +121,15 @@
 
       <!-- TOP BAR -->
       <header class="topbar">
-        <span class="topbar-title" id="topbar-title">Meus Estudos</span>
-        <div style="display:flex;align-items:center;gap:.75rem;">
-          <!-- Hamburger (mobile) -->
-          <button id="hamburger" style="display:none;background:none;border:none;cursor:pointer;color:var(--text-dim);padding:.25rem;"
-                  aria-label="Abrir menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
-                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="3" y1="6" x2="21" y2="6"/>
-              <line x1="3" y1="12" x2="21" y2="12"/>
-              <line x1="3" y1="18" x2="21" y2="18"/>
-            </svg>
-          </button>
-        </div>
+        <span class="topbar-title">Meus Estudos</span>
       </header>
 
       <!-- GLOBAL PROGRESS STRIP -->
       <div class="progress-strip">
         <span class="prog-label">Progresso geral</span>
-        <span class="prog-count" id="global-count">0 / 0</span>
+        <span class="prog-count">
+          <span id="global-done">0</span> / <span id="global-total">0</span>
+        </span>
         <div class="prog-bar-wrap">
           <div class="prog-bar-fill" id="global-bar" style="width:0%"></div>
         </div>
@@ -161,19 +137,17 @@
       </div>
 
       <!-- SUBJECT TABS -->
-      <div class="subject-tabs" id="subject-tabs">
+      <div class="subject-tabs">
         <button class="subject-tab active" data-subject="trafego">
-          <!-- TrendingUp icon -->
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
             <polyline points="17 6 23 6 23 12"/>
           </svg>
           Tráfego Pago
-          <span class="tab-count" id="tab-count-trafego">0</span>
+          <span class="tab-count" id="tp-tab-count">0</span>
         </button>
         <button class="subject-tab" data-subject="design">
-          <!-- Palette icon -->
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
@@ -183,17 +157,17 @@
             <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>
           </svg>
           Design Gráfico
-          <span class="tab-count" id="tab-count-design">0</span>
+          <span class="tab-count" id="dg-tab-count">0</span>
         </button>
       </div>
 
       <!-- CONTENT AREA -->
       <div class="content-area">
         <div class="tab-content active" id="tab-trafego">
-          <div id="tp-content"><!-- rendered by app.js --></div>
+          <div id="tp-content"></div>
         </div>
         <div class="tab-content" id="tab-design">
-          <div id="dg-content"><!-- rendered by app.js --></div>
+          <div id="dg-content"></div>
         </div>
       </div>
 

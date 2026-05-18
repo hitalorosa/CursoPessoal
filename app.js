@@ -337,7 +337,8 @@ function renderApp() {
   document.getElementById('btn-logout').addEventListener('click', () => {
     document.getElementById('app-screen').classList.remove('visible');
     document.getElementById('login-screen').style.display = 'flex';
-    document.getElementById('pwd-input').value = '';
+    const pwdInput = document.getElementById('pwd-input');
+    if (pwdInput) pwdInput.value = '';
   });
 }
 
